@@ -52,6 +52,7 @@ $(function() {
 		this.$element = createCard();
 
 		function createCard() {
+			if ((!(self.description == false)) && (!(self.description == null))) {
 			var $card = $('<li>').addClass('card');
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
 			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
@@ -63,6 +64,9 @@ $(function() {
 			$card.append($cardDelete).append($cardDescription);
 
 			return $card;
+			} else if (self.description == false) {
+				alert('Please write down task description');
+			};
 		};
 	};
 
@@ -90,8 +94,12 @@ $(function() {
 
   $('.create-column').click(function() {
   	var name = prompt('Enter a column name');
+  	if ((!(name == false)) && (!(name == null))) {
   	var column = new Column(name);
   	board.addColumn(column);
+  } else if (name == false) {
+  	alert('Error! New column must be named.');
+  };
   });
 
   var todoColumn = new Column('To do');
