@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #2c3e50;
+	background-color: #2980b9;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	margin: 0 0 10px;
+}
+
+button {
+	display: inline-block;
+  padding: 6px 12px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+button:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.board {
+	background-color: #ecf0f1;
+	width: 80%;
+	min-width: 750px;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.board:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+	box-sizing: border-box;
+	background-color: #bdc3c7;
+	float: left;
+	width: calc(33.33% - 6.67px);
+	padding: 25px;
+	margin: 10px 10px 10px 0;
+	position: relative;
+}
+
+.column::before {
+	content: "This column is empty.";
+	position: absolute;
+	top: 80px;
+}
+
+.column:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+.column-title {
+	border-bottom: 1px solid #2c3e50;
+}
+
+.btn-delete {
+	color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+.add-card {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.add-card:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+.column > .btn-delete, .column > .add-card {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.column > .btn-delete {
+	right: 105px;
+}
+
+.column-card-list {
+	min-height: 50px;
+	margin-bottom: 0;
+}
+
+.column > ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.column > ul > li {
+	background-color: #ecf0f1;
+	position: relative;
+	min-height: 50px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.column > ul > li > .btn-delete {
+	position: relative;
+	float: right;
+}
+
+.card-placeholder {
+	border: 2px dashed #2c3e50;
+}
