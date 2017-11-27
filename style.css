@@ -12,6 +12,10 @@ h1, h2 {
 	margin: 0 0 10px;
 }
 
+h2 {
+	margin-top: 25px;
+}
+
 button {
 	display: inline-block;
   padding: 6px 12px;
@@ -32,15 +36,28 @@ button:hover {
   border-color: #adadad;
 }
 
-.board {
-	background-color: #ecf0f1;
+.boards-container {
+	box-sizing: border-box;
+	margin: 20px auto;
+	padding: 20px;
 	width: 80%;
 	min-width: 750px;
-	margin: 20px auto;
-	padding: 10px;
+	border: 15px solid #000;
 }
 
-.board:after {
+.create-board {
+	margin-bottom: 20px;
+
+}
+
+.board {
+	background-color: #ecf0f1;
+	width: 75%;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.board:after, .boards-container:after {
   content: "";
   display: table;
   clear: both;
@@ -59,7 +76,7 @@ button:hover {
 .column::before {
 	content: "This column is empty.";
 	position: absolute;
-	top: 80px;
+	top: 100px;
 }
 
 .column:nth-of-type(3n) {
@@ -68,6 +85,7 @@ button:hover {
 
 .column-title {
 	border-bottom: 1px solid #2c3e50;
+	border-top: 1px solid #2c3e50;
 }
 
 .btn-delete {
@@ -97,11 +115,11 @@ button:hover {
 .column > .btn-delete, .column > .add-card {
 	position: absolute;
 	top: 10px;
-	right: 10px;
+	right: 139px;
 }
 
 .column > .btn-delete {
-	right: 105px;
+	right: 24px;
 }
 
 .column-card-list {
