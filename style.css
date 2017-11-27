@@ -36,25 +36,28 @@ button:hover {
   border-color: #adadad;
 }
 
-.boards-container {
+#boards-container {
 	box-sizing: border-box;
-	margin: 20px auto;
-	padding: 20px;
+	margin: 0 auto;
+	padding: 10px;
 	width: 80%;
-	min-width: 750px;
-	border: 15px solid #000;
+	min-width: 850px;
+	background-image: radial-gradient(at top left, rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 50%);
 }
 
 .create-board {
+	margin-left: 1.5%;
 	margin-bottom: 20px;
 
 }
 
 .board {
 	background-color: #ecf0f1;
-	width: 75%;
+	width: 95%;
 	padding: 10px;
+	margin: 0 auto;
 	margin-bottom: 20px;
+	border-radius: 10px;
 }
 
 .board:after, .boards-container:after {
